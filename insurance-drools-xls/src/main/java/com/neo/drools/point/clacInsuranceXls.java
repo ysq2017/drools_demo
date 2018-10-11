@@ -26,18 +26,24 @@ public class clacInsuranceXls {
         KieSession kSession = getSession();
 
         FullRequest fullRequest = new FullRequest();
-        Result result = new Result();
+        //收入信息
         FamilyIncomeExpenseInfo familyIncomeExpenseInfo = new FamilyIncomeExpenseInfo();
-        familyIncomeExpenseInfo.setFamilyIncome(10);
-        fullRequest.setFamilyIncomeExpenseInfo(familyIncomeExpenseInfo);
+        familyIncomeExpenseInfo.setFamilyIncome(60);
+
         FamilyMemberInfo familyMemberInfo;
         SelfBaseInfo selfBaseInfo;
-        SelfHealthInfo selfHealthInfo;
-        SelfWorkInfo selfWorkInfo;
+        // 健康信息
+        SelfHealthInfo selfHealthInfo = new SelfHealthInfo();
+        selfHealthInfo.setHealth(SelfHealthInfo.Health.NO);
+        //工作信息
+        SelfWorkInfo selfWorkInfo = new SelfWorkInfo();
+        selfWorkInfo.setIndustry(SelfWorkInfo.INDUSTRY.OUTDOOR);
 
-        InsuranceResult insuranceResult = new InsuranceResult();
-//        insuranceResult.setScore(10);
-        fullRequest.setInsuranceResult(insuranceResult);
+
+        fullRequest.setFamilyIncomeExpenseInfo(familyIncomeExpenseInfo);
+        fullRequest.setSelfHealthInfo(selfHealthInfo);
+        fullRequest.setSelfWorkInfo(selfWorkInfo);
+        fullRequest.setResults(new ArrayList<InsuranceResult>());
 
         // 需要把规则所有参数统一传入（包括输入输出）
         kSession.insert(fullRequest);
@@ -46,7 +52,6 @@ public class clacInsuranceXls {
         kSession.dispose();
 
         System.out.println("触发了" + ruleFiredCount + "条规则");
-
 
     }
 

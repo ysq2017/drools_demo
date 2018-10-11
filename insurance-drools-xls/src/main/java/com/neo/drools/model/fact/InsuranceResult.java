@@ -50,7 +50,8 @@ public class InsuranceResult {
     public enum InsuranceEnum {
         MEDICAL(1, "医疗"),
         SERIOUS_ILLNESS(2, "重疾"),
-        SAVING(3, "储蓄");
+        SAVING(3, "储蓄"),
+        ACCIDENT(4, "意外");
 
         private int id;
 

@@ -74,6 +74,10 @@ public class FullRequest {
         this.results = results;
     }
 
+    public void addResults(List<InsuranceResult> results) {
+        this.results.addAll(results);
+    }
+
     public InsuranceResult getInsuranceResult() {
         return insuranceResult;
     }
