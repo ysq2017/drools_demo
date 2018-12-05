@@ -6,6 +6,8 @@ public class User {
 
     private int level;// 用户级别
 
+    private int age;
+
     public User(){
 
     }
@@ -29,5 +31,13 @@ public class User {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }

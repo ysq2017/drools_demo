@@ -8,6 +8,8 @@ public class Order {
 
     private int amount;// 订单原价金额
 
+    private int discountAmount;// 订单折扣后价格
+
     private User user;// 下单人
 
     private int score;//积分
@@ -36,6 +38,14 @@ public class Order {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public int getDiscountAmount() {
+        return discountAmount;
+    }
+
+    public void setDiscountAmount(int discountAmount) {
+        this.discountAmount = discountAmount;
     }
 
     public User getUser() {
