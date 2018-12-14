@@ -7,9 +7,9 @@
         <ksession name="ksession-calcXLS"/>
     </kbase>
 
-    <kbase name="calcPointLoop" packages="looptest">
-        <!--会把packages下的所有规则加进来，所以不同类别的规则最好放在不同的packages下-->
-        <ksession name="ks-loopCalc"/>
-    </kbase>
+    <!--<kbase name="calcPointLoop" packages="looptest">-->
+        <!--&lt;!&ndash;会把packages下的所有规则加进来，所以不同类别的规则最好放在不同的packages下&ndash;&gt;-->
+        <!--<ksession name="ks-loopCalc"/>-->
+    <!--</kbase>-->
 
 </kmodule>
